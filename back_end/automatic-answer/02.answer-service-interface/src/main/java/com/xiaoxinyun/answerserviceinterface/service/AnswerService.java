@@ -21,4 +21,7 @@ public interface AnswerService {
 
     List<Answer> getByKeyWord(String keyWord);
 
+
+    Integer saveList(List<Answer> list);
+
 }

@@ -1,4 +1,4 @@
-package com.xiaoxinyun.commonutil.utils.exception;
+package com.xiaoxinyun.commonutil.exception;
 
 /**
  *

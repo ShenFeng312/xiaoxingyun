@@ -4,6 +4,9 @@ import com.alibaba.fastjson.JSONObject;
 import com.xiaoxinyun.answerservice.repository.AnswerRepository;
 import com.xiaoxinyun.answerserviceinterface.entity.Answer;
 import com.xiaoxinyun.answerserviceinterface.service.AnswerService;
+import com.xiaoxinyun.commonutil.utils.CommUtil;
+import lombok.extern.log4j.Log4j;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.dubbo.config.annotation.Service;
 import org.elasticsearch.index.query.BoolQueryBuilder;
 import org.elasticsearch.index.query.QueryBuilders;
@@ -26,6 +29,7 @@ import java.util.List;
  * @create 2019-08-24 13:37:04
  */
 @Service(version = "${dubbo.version}")
+@Slf4j
 public class AnswerServiceImpl implements AnswerService {
 
     @Autowired
@@ -91,5 +95,23 @@ public class AnswerServiceImpl implements AnswerService {
         System.out.println(JSONObject.toJSONString(answers));
 
         return answers;
+    }
+
+    @Override
+    public Integer saveList(List<Answer> list) {
+
+        int successCount = 0;
+        if (list == null) return 0;
+
+        for (Answer answer : list) {
+            try {
+                answer.setId(CommUtil.getGUID());
+                Answer answer1 = answerRepository.save(answer);
+                successCount++;
+            } catch (Exception ex) {
+                log.error("导入异常", ex);
+            }
+        }
+        return successCount;
     }
 }

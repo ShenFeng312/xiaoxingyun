@@ -17,6 +17,9 @@ public class Answer implements Serializable {
     @Id
     private String id;
 
+    private String deptName;
+    private String deptId;
+    private String diseaseName;
     private String questionTitle;
     private String questionDesc;
     private String keyWord;

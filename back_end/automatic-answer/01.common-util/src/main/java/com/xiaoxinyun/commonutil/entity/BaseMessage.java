@@ -1,8 +1,8 @@
-package com.xiaoxinyun.commonutil.utils.entity;
+package com.xiaoxinyun.commonutil.entity;
 
 import com.alibaba.fastjson.JSONObject;
+import com.xiaoxinyun.commonutil.exception.ParamsException;
 import com.xiaoxinyun.commonutil.utils.CommUtil;
-import com.xiaoxinyun.commonutil.utils.exception.ParamsException;
 import lombok.Data;
 import org.springframework.util.StringUtils;
 
