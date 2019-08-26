@@ -14,7 +14,7 @@ import java.util.List;
  * @create 2019-08-26 9:38:43
  */
 
-@Service
+@Service(filter = "VerifyFilter")
 public class UserServiceImpl implements UserService {
 
     @Autowired

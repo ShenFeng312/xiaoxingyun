@@ -20,7 +20,7 @@ import java.util.List;
 @RestController
 public class TestController {
 
-    @Reference(version = "${dubbo.version}")
+    @Reference(version = "${dubbo.version}",group = "answer",filter = {"AddTokenFilter"})
     AnswerService answerService;
 
 

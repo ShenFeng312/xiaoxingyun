@@ -27,7 +27,7 @@ import java.util.List;
  * @auther machunsen
  * @create 2019-08-24 13:37:04
  */
-@Service(version = "${dubbo.version}")
+@Service(version = "${dubbo.version}",group = "answer",filter = "VerifyFilter")
 @Slf4j
 public class AnswerServiceImpl implements AnswerService {
 

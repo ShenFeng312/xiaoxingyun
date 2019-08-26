@@ -1,0 +1,1 @@
+AddTokenFilter=com.xiaoxinyun.answerweb.config.dubbo.filter.AddTokenFilter
