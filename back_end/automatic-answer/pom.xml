@@ -13,6 +13,8 @@
     <version>0.0.1</version>
     <name>automatic-answer</name>
     <description>Demo project for Spring Boot</description>
+    <packaging>pom</packaging>
+
 
     <properties>
         <java.version>1.8</java.version>

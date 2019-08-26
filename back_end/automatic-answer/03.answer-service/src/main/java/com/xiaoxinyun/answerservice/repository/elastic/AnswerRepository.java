@@ -1,4 +1,4 @@
-package com.xiaoxinyun.answerservice.repository;
+package com.xiaoxinyun.answerservice.repository.elastic;
 
 import com.xiaoxinyun.answerserviceinterface.entity.Answer;
 import org.springframework.data.elasticsearch.repository.ElasticsearchRepository;

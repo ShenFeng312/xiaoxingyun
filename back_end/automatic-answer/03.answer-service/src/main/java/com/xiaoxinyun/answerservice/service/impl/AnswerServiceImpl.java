@@ -1,11 +1,10 @@
 package com.xiaoxinyun.answerservice.service.impl;
 
 import com.alibaba.fastjson.JSONObject;
-import com.xiaoxinyun.answerservice.repository.AnswerRepository;
+import com.xiaoxinyun.answerservice.repository.elastic.AnswerRepository;
 import com.xiaoxinyun.answerserviceinterface.entity.Answer;
 import com.xiaoxinyun.answerserviceinterface.service.AnswerService;
 import com.xiaoxinyun.commonutil.utils.CommUtil;
-import lombok.extern.log4j.Log4j;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.dubbo.config.annotation.Service;
 import org.elasticsearch.index.query.BoolQueryBuilder;
