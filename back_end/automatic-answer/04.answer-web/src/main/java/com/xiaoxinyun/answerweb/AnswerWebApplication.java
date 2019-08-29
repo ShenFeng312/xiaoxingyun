@@ -9,6 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class AnswerWebApplication {
 
     public static void main(String[] args) {
+        System.setProperty("dubbo.application.logger","slf4j");
         SpringApplication.run(AnswerWebApplication.class, args);
     }
 

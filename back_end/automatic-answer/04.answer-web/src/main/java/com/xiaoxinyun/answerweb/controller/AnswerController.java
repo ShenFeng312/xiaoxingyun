@@ -40,7 +40,7 @@ import java.util.List;
 @Slf4j
 public class AnswerController extends BaseController {
 
-    @Reference(version = "${dubbo.version}",group = "answer",filter = "com.xiaoxinyun.answerweb.config.dubbo.filter.AddTokenFilter")
+    @Reference(version = "${dubbo.version}",group = "answer",filter = {"AddTokenFilter"})
     AnswerService answerService;
 
 
